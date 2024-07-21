@@ -16,8 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.asa.projectfightbooking.adapter.PostAdapter;
 import com.asa.projectfightbooking.app.BaseActivity;
 import com.asa.projectfightbooking.data.local.UserSharePreference;
-import com.asa.projectfightbooking.models.response.PostsItem;
+import com.asa.projectfightbooking.models.response.post.PostsItem;
 import com.asa.projectfightbooking.presenters.PostPresenter;
+import com.asa.projectfightbooking.ui.LoginActivity;
 import com.asa.projectfightbooking.ui.PostDetailActivity;
 import com.asa.projectfightbooking.views.PostView;
 
@@ -49,7 +50,7 @@ public class NotificationActivity extends BaseActivity implements PostView {
             @Override
             public void onClick(View v) {
                 UserSharePreference.removeUserLogin(NotificationActivity.this);
-                Intent i = new Intent(NotificationActivity.this, MainActivity.class);
+                Intent i = new Intent(NotificationActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }

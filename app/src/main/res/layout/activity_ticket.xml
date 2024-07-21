@@ -589,8 +589,6 @@
                 android:text="Profile"
                 android:textSize="14sp" />
         </LinearLayout>
-
-
     </LinearLayout>
 
 </RelativeLayout>

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.asa.projectfightbooking.R;
-import com.asa.projectfightbooking.models.response.PostsItem;
+import com.asa.projectfightbooking.models.response.post.PostsItem;
 
 import java.util.List;
 

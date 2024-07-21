@@ -2,8 +2,8 @@ package com.asa.projectfightbooking.presenters;
 
 import com.asa.projectfightbooking.api.APIClient;
 import com.asa.projectfightbooking.api.ApiInterface;
-import com.asa.projectfightbooking.models.response.PostResponse;
-import com.asa.projectfightbooking.models.response.PostsItem;
+import com.asa.projectfightbooking.models.response.post.PostResponse;
+import com.asa.projectfightbooking.models.response.post.PostsItem;
 import com.asa.projectfightbooking.views.PostView;
 
 import retrofit2.Call;

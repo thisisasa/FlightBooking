@@ -1,4 +1,4 @@
-package com.asa.projectfightbooking.models.response;
+package com.asa.projectfightbooking.models.response.post;
 
 import com.google.gson.annotations.SerializedName;
 

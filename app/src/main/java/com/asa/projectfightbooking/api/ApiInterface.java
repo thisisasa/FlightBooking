@@ -1,8 +1,11 @@
 package com.asa.projectfightbooking.api;
 
-import com.asa.projectfightbooking.model.Product;
-import com.asa.projectfightbooking.models.response.PostResponse;
-import com.asa.projectfightbooking.models.response.PostsItem;
+import com.asa.projectfightbooking.models.requests.LoginRequest;
+import com.asa.projectfightbooking.models.requests.ResgisterRequest;
+import com.asa.projectfightbooking.models.response.BaseResponse;
+import com.asa.projectfightbooking.models.response.post.PostResponse;
+import com.asa.projectfightbooking.models.response.post.PostsItem;
+import com.asa.projectfightbooking.models.response.login.LoginResponse;
 import com.asa.projectfightbooking.models.response.products.ProductResponse;
 import com.asa.projectfightbooking.models.response.products.ProductsItem;
 
@@ -21,4 +24,8 @@ public interface ApiInterface {
     Call<ProductResponse> getAllProducts();
     @GET("/products/{id}")
     Call<ProductsItem> getProductById(@Path("id") int id);
+    @POST("/users/add")
+    Call<BaseResponse<String>> registerUser(@Body ResgisterRequest request);
+    @POST("/user/login")
+    Call<LoginResponse> loginUser(@Body LoginRequest request);
 }

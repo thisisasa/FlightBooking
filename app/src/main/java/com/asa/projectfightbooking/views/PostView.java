@@ -1,6 +1,6 @@
 package com.asa.projectfightbooking.views;
 
-import com.asa.projectfightbooking.models.response.PostsItem;
+import com.asa.projectfightbooking.models.response.post.PostsItem;
 
 import java.util.List;
 

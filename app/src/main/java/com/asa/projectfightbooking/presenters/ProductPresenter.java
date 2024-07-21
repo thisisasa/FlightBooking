@@ -14,7 +14,6 @@ public class ProductPresenter {
         private final ProductView view;
         private ApiInterface apiInterface;
 
-
         public ProductPresenter(ProductView view) {
             this.view = view;
             apiInterface = APIClient.getClient().create(ApiInterface.class);

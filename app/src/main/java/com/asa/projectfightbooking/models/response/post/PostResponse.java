@@ -1,9 +1,10 @@
-package com.asa.projectfightbooking.models.response.products;
+package com.asa.projectfightbooking.models.response.post;
 
-import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class ProductResponse{
+import java.util.List;
+
+public class PostResponse{
 
 	@SerializedName("total")
 	private int total;
@@ -14,8 +15,8 @@ public class ProductResponse{
 	@SerializedName("skip")
 	private int skip;
 
-	@SerializedName("products")
-	private List<ProductsItem> products;
+	@SerializedName("posts")
+	private List<PostsItem> posts;
 
 	public void setTotal(int total){
 		this.total = total;
@@ -41,22 +42,22 @@ public class ProductResponse{
 		return skip;
 	}
 
-	public void setProducts(List<ProductsItem> products){
-		this.products = products;
+	public void setPosts(List<PostsItem> posts){
+		this.posts = posts;
 	}
 
-	public List<ProductsItem> getProducts(){
-		return products;
+	public List<PostsItem> getPosts(){
+		return posts;
 	}
 
 	@Override
  	public String toString(){
 		return 
-			"ProductResponse{" + 
+			"PostResponse{" + 
 			"total = '" + total + '\'' + 
 			",limit = '" + limit + '\'' + 
 			",skip = '" + skip + '\'' + 
-			",products = '" + products + '\'' + 
+			",posts = '" + posts + '\'' + 
 			"}";
 		}
 }

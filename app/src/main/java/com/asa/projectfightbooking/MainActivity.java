@@ -56,52 +56,52 @@ public class MainActivity extends BaseActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        initView();
+       // initView();
         btnRegister = findViewById(R.id.btnRegister);
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, RegisterActivity.class);
-                startActivity(i);
-            }
-        });
+//        btnRegister.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(MainActivity.this, ui.RegisterActivity.class);
+//                startActivity(i);
+//            }
+//        });
 
     }
-    public void initView() {
-        etUserLogin = findViewById(R.id.etUserLogin);
-        etPassLogin = findViewById(R.id.etPassLogin);
-        btnLogin = findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = etUserLogin.getText().toString().trim();
-                String password = etPassLogin.getText().toString().trim();
-                if (username.isEmpty()) {
-                    showMessage("Please enter username");
-                    return;
-                }
-                if (password.isEmpty()) {
-                    showMessage("Please enter password");
-                    return;
-                }
-                if (!username.equals(USERNAME)) {
-                    showMessage("Your username incorrect!");
-                    return;
-                }
-                if (!password.equals(PASSWORD)) {
-                    showMessage("Your password incorrect!");
-                    return;
-                }
-                UserSharePreference.saveUserLogin(
-                        MainActivity.this,
-                        username,
-                        password
-                );
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(intent);
-                finish();
-                showMessage("Login Success!");
-            }
-        });
-    }
+//    public void initView() {
+//        etUserLogin = findViewById(R.id.etUserLogin);
+//        etPassLogin = findViewById(R.id.etPassLogin);
+//        btnLogin = findViewById(R.id.btnLogin);
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String username = etUserLogin.getText().toString().trim();
+//                String password = etPassLogin.getText().toString().trim();
+//                if (username.isEmpty()) {
+//                    showMessage("Please enter username");
+//                    return;
+//                }
+//                if (password.isEmpty()) {
+//                    showMessage("Please enter password");
+//                    return;
+//                }
+//                if (!username.equals(USERNAME)) {
+//                    showMessage("Your username incorrect!");
+//                    return;
+//                }
+//                if (!password.equals(PASSWORD)) {
+//                    showMessage("Your password incorrect!");
+//                    return;
+//                }
+//                UserSharePreference.saveUserLogin(
+//                        MainActivity.this,
+//                        username,
+//                        password
+//                );
+//                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+//                startActivity(intent);
+//                finish();
+//                showMessage("Login Success!");
+//            }
+//        });
+
 }

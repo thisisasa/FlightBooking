@@ -9,6 +9,6 @@ public interface ProductView {
     void onMidingLoading();
     void onError(String message);
     void onSuccess(String message);
-    void onGetProductSuccess(List<ProductsItem> productsItemList);
+    void onGetProductSuccess(List<ProductsItem> productsItemsList);
     void onGetProductByIdSuccess(ProductsItem data);
 }

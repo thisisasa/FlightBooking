@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.asa.projectfightbooking.ui.LoginActivity;
+
 public class GetStartActivity extends AppCompatActivity {
     private Button btngetstarted;
     @Override
@@ -27,7 +29,7 @@ public class GetStartActivity extends AppCompatActivity {
         btngetstarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(GetStartActivity.this, MainActivity.class);
+                Intent i = new Intent(GetStartActivity.this, HomeActivity.class);
                 startActivity(i);
             }
         });

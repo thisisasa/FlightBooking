@@ -17,6 +17,8 @@ import com.asa.projectfightbooking.adapter.CategoryAdapter;
 import com.asa.projectfightbooking.app.BaseActivityCategory;
 import com.asa.projectfightbooking.data.local.UserSharePreference;
 import com.asa.projectfightbooking.model.Category;
+import com.asa.projectfightbooking.ui.AllProductActivity;
+import com.asa.projectfightbooking.ui.LoginActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,18 +44,13 @@ public class HomeActivity extends BaseActivityCategory {
         //get category
         getCategories();
 
-        //show username on screen
-        tvUsername = findViewById(R.id.tvUsername);
-        if(!UserSharePreference.getUsername(this).equals("")){
-            tvUsername.setText(UserSharePreference.getUsername(this));
-        }
         //logout
         ivProfile = findViewById(R.id.ivProF);
         ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 UserSharePreference.removeUserLogin(HomeActivity.this);
-                Intent i = new Intent(HomeActivity.this, MainActivity.class);
+                Intent i = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -83,7 +80,7 @@ public class HomeActivity extends BaseActivityCategory {
         tvSeeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ProductActivity.class);
+                Intent intent = new Intent(HomeActivity.this, AllProductActivity.class);
                 startActivity(intent);
             }
         });

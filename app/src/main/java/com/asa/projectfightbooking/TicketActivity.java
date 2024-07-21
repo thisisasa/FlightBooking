@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.asa.projectfightbooking.data.local.UserSharePreference;
+import com.asa.projectfightbooking.ui.LoginActivity;
 
 public class TicketActivity extends AppCompatActivity {
     private ImageView ivProfile, ivHome, ivNotification;
@@ -31,7 +32,7 @@ public class TicketActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 UserSharePreference.removeUserLogin(TicketActivity.this);
-                Intent i = new Intent(TicketActivity.this, MainActivity.class);
+                Intent i = new Intent(TicketActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }
