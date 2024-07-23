@@ -87,5 +87,8 @@ public class LoginActivity extends BaseActivity implements LoginView {
     @Override
     public void onSuccess(Object message) {
         showMessage("Login Success");
+        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+        startActivity(i);
+        finish();
     }
 }
